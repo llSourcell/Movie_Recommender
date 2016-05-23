@@ -1,34 +1,32 @@
-# Amazon DSSTNE: Deep Scalable Sparse Tensor Network Engine
+#Overview
+This project  trains 3 layer feedforward neural network over a dataset of MovieLens-based user ratings to generate movie recommendations. This the code for 'Build an Movie Recommender' on [Youtube](https://youtu.be/eKmIVU8EUbw).
 
-DSSTNE (pronounced "Destiny") is an open source software library for training and deploying deep neural
-networks using GPUs. Amazon engineers built DSSTNE to solve deep learning
-problems at Amazon's scale. DSSTNE is built for production deployment of real-world
-deep learning applications, emphasizing speed and scale over experimental flexibility.
+#Dependencies
+[Ideally you just run this on the preconfigured AWS image, so you don't have to worry about this -- these dependencies are a b*tch]
+[GCC](https://gcc.gnu.org/install/)
+[CuBLAS](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#cublas-setup)
+Cuda Toolkit (>= 7.0 is required) [
+[OpenMPI](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#openmpi-setup)
+[NetCDF](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#netcdf-setup)
+[JsonCPP](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#jsoncpp-setup)
+[CUB](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#cub-setup)
 
-DSSTNE was built with a number of features for production workloads:
+#Basic Usage
 
-* **Multi-GPU Scale**: Training and prediction
-both scale out to use multiple GPUs, spreading out computation
-and storage in a model-parallel fashion for each layer.
-* **Large Layers**: Model-parallel scaling enables larger networks than
-are possible with a single GPU.
-* **Sparse Data**: DSSTNE is optimized for fast performance on sparse datasets. Custom GPU kernels perform sparse computation on the GPU, without filling in lots of zeroes.
+1. Create a GPU instance in the US East N. Virginia Region using the preconfigured AMI [Amazon Machine Image] called 'ami-d6f2e6bc'
+2. Download this repo, then upload it to the root directory of that instance via FileZilla
+3. SSH into that instance and compile this project via the following commands
+```bash
+cd amazon-dsstne/src/amazon/dsstne
+#Add the mpiCC and nvcc compiler in the path
+export PATH=/usr/local/openmpi/bin:/usr/local/cuda/bin:$PATH
+make
+export PATH=`pwd`/bin:$PATH
+cd samples
+g++ commands.cpp demo.cpp 
+./a.out
+```
+Demo.cpp is the code from the video tutorial. It'll generate a set of recommendations from the dataset in the recs file.
 
-## Benchmarks
-* scottlegrand@ reported a [14.8x speed up vs Tensorflow](https://medium.com/@scottlegrand/first-dsstne-benchmarks-tldr-almost-15x-faster-than-tensorflow-393dbeb80c0f#.ghe74fu1q)
-* Directions on how to run a benchmark can be found in [here](benchmarks/Benchmark.md)
-
-## License
-[License](LICENSE)
-
-## Setup
-* Follow [Setup](docs/getting_started/setup.md) for step by step instructions on installing and setting up DSSTNE
-
-## User Guide
-* Check [User Guide](docs/getting_started/userguide.md) for detailed information about the features in DSSTNE
-
-## Examples
-* Check [Examples](docs/getting_started/examples.md) to start trying your first Neural Network Modeling using DSSTNE
-
-## Q&A
-[FAQ](FAQ.md)
+Credits
+Credit for this library goes to the DSSTNE team at Amazon. I've merely created a C++ wrapper around all of the important functions to get people started.
