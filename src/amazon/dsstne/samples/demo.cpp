@@ -2,8 +2,6 @@
 #include "commands.h"
 
 using namespace std;
-
-
 int main()
 {
     //Collect the dataset
