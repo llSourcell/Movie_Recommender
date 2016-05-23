@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	//Collect the dataset
+    //Collect the dataset
     retrieveDataset("https://s3-us-west-2.amazonaws.com/amazon-dsstne-samples/data/ml20m-all");
     //Generate input and output layer of our neural network (netcdf files are generated)
     generateInputLayer("ml20m-all");
