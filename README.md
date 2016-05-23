@@ -1,5 +1,5 @@
 #Overview
-This project  trains 3 layer feedforward neural network over a dataset of MovieLens-based user ratings to generate movie recommendations. This the code for 'Build an Movie Recommender' on [Youtube](https://youtu.be/eKmIVU8EUbw).
+This project  trains 3 layer feedforward neural network over a dataset of MovieLens-based user ratings to generate movie recommendations. This the code for 'Build a Movie Recommender' on [Youtube](https://youtu.be/eKmIVU8EUbw).
 
 #Dependencies
 [Just run this on the preconfigured AWS image, so you don't have to worry about this -- these dependencies are a b*tch]
