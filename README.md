@@ -3,13 +3,20 @@ This project  trains 3 layer feedforward neural network over a dataset of MovieL
 
 #Dependencies
 [Ideally you just run this on the preconfigured AWS image, so you don't have to worry about this -- these dependencies are a b*tch]
+
 [GCC](https://gcc.gnu.org/install/)
+
 [CuBLAS](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#cublas-setup)
-Cuda Toolkit (>= 7.0 is required) [
+
+Cuda Toolkit (>= 7.0 is required) 
 [OpenMPI](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#openmpi-setup)
+
 [NetCDF](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#netcdf-setup)
+
 [JsonCPP](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#jsoncpp-setup)
+
 [CUB](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#cub-setup)
+
 
 #Basic Usage
 
