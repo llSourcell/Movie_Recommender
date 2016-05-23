@@ -2,12 +2,10 @@
 This project  trains 3 layer feedforward neural network over a dataset of MovieLens-based user ratings to generate movie recommendations. This the code for 'Build an Movie Recommender' on [Youtube](https://youtu.be/eKmIVU8EUbw).
 
 #Dependencies
-[Ideally you just run this on the preconfigured AWS image, so you don't have to worry about this -- these dependencies are a b*tch]
+[Just run this on the preconfigured AWS image, so you don't have to worry about this -- these dependencies are a b*tch]
 
 [GCC](https://gcc.gnu.org/install/)
-
 [CuBLAS](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#cublas-setup)
-
 Cuda Toolkit (>= 7.0 is required) 
 [OpenMPI](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#openmpi-setup)
 
