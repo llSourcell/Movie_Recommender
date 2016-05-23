@@ -31,4 +31,4 @@ g++ commands.cpp demo.cpp
 Demo.cpp is the code from the video tutorial. It'll generate a set of recommendations from the dataset in the recs file.
 
 #Credits
-Credit for this library goes to the DSSTNE team at Amazon. I've merely created a C++ wrapper around all of the important functions to get people started.
+Credit for this library goes to the [DSSTNE](https://github.com/amznlabs/amazon-dsstne) team at Amazon. I've merely created a C++ wrapper around all of the important functions to get people started.
