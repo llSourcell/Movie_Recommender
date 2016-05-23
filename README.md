@@ -15,7 +15,7 @@ This project  trains 3 layer feedforward neural network over a dataset of MovieL
 
 #Basic Usage
 
-1. Create a GPU instance in the US East N. Virginia region using the preconfigured AMI [Amazon Machine Image] called 'ami-d6f2e6bc'
+1. Create a [GPU instance](https://aws.amazon.com/) in the US East N. Virginia region using the preconfigured AMI [Amazon Machine Image] called 'ami-d6f2e6bc'
 2. Download this repo, then upload it to the root directory of that instance via FileZilla
 3. SSH into that instance and compile this project via the following commands
 ```bash
