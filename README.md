@@ -1,7 +1,7 @@
-#Overview
+# Overview
 This project  trains 3 layer feedforward neural network over a dataset of MovieLens-based user ratings to generate movie recommendations. This the code for 'Build a Movie Recommender' on [Youtube](https://youtu.be/eKmIVU8EUbw).
 
-#Dependencies
+# Dependencies
 [Just run this on the preconfigured AWS image so you don't have to worry about this -- these dependencies aren't trivial]
 
 * [GCC](https://gcc.gnu.org/install/)
@@ -13,7 +13,7 @@ This project  trains 3 layer feedforward neural network over a dataset of MovieL
 * [CUB](https://github.com/amznlabs/amazon-dsstne/blob/master/docs/getting_started/setup.md#cub-setup)
 
 
-#Basic Usage
+# Basic Usage
 
 1. Create a [GPU instance](https://aws.amazon.com/) in the US East N. Virginia region using the preconfigured AMI [Amazon Machine Image] called 'ami-d6f2e6bc'
 2. Download this repo, then upload it to the root directory of that instance via FileZilla
@@ -30,5 +30,5 @@ g++ commands.cpp demo.cpp
 ```
 Demo.cpp is the code from the video tutorial. It'll generate a set of recommendations from the dataset in the recs file.
 
-#Credits
+# Credits
 Credit for this library goes to the [DSSTNE](https://github.com/amznlabs/amazon-dsstne) team at Amazon. I've merely created a C++ wrapper around all of the important functions to get people started.
